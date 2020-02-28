@@ -29,6 +29,7 @@ def post(caption):
     auth.set_access_token(access_token, access_token_secret) 
     api = tweepy.API(auth) 
     image_path ='post.jpg' 
+    caption+="#python #bot #programming #random"
     api.update_with_media(image_path, caption)  
     
 if __name__ == "__main__":
