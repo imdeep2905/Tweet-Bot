@@ -1,7 +1,7 @@
 # Tweet Bot
 
 # Introduction
-This is a fun little project created in python. It will fetch random image from [Unsplash](https://source.unsplash.com/) and random caption from [sassycaptions](https://sassycaptions.com/generator/). Then it will post it on twitter with tweepy.
+This is a fun little project created in python. It will fetch random image from [Unsplash](https://source.unsplash.com/) and random caption from [sassycaptions](https://sassycaptions.com/generator/). Then it will post it on twitter using tweepy.
 
 # How to run 
 
