@@ -11,14 +11,14 @@ def get_random_image():
     img.save('post.jpg')
     print("Image Fatched !")
 
+import random
 def get_random_caption():
-    driver=webdriver.Chrome()
-    driver.get("https://sassycaptions.com/generator/")
-    button=driver.find_element_by_id('gen')
-    button.click()
-    caption=driver.find_element_by_id('content')
+    driver = webdriver.Chrome()
+    driver.get("https://randomtextgenerator.com/")
+    caption = driver.find_element_by_id('generatedtext')
+    captions = caption.text.split('.')
     print("Caption Fatched !")
-    return caption.text
+    return captions[0]+'.'
     
 def post(caption):
     consumer_key = "XXX"
