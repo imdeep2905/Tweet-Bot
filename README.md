@@ -1,5 +1,5 @@
 # Tweet Bot
-
+Follow the bot [Here!](https://twitter.com/tweet_bot_1729)
 # Introduction
 This is a fun little project created in python. It will fetch random image from [Unsplash](https://source.unsplash.com/) and random caption from [randomtextgenerator](https://randomtextgenerator.com/). Then it will post it on twitter using tweepy.
 
