@@ -11,14 +11,13 @@ def get_random_image():
     img.save('post.jpg')
     print("Image Fatched !")
 
-import random
 def get_random_caption():
     driver = webdriver.Chrome()
     driver.get("https://randomtextgenerator.com/")
     caption = driver.find_element_by_id('generatedtext')
     captions = caption.text.split('.')
     print("Caption Fatched !")
-    return captions[0]+'.'
+    return captions[0] + '. '+ f'#{captions[1].split()[0]} ' + f'#{captions[1].split()[1]} ' + f'#{captions[1].split()[2]}' 
     
 def post(caption):
     consumer_key = "XXX"
@@ -28,8 +27,10 @@ def post(caption):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret) 
     auth.set_access_token(access_token, access_token_secret) 
     api = tweepy.API(auth) 
+    for follower in api.followers_ids():
+        api.create_friendship(follower)
     image_path ='post.jpg' 
-    caption+="#python #bot #programming #random"
+    caption+=" #bot #random"
     api.update_with_media(image_path, caption)  
     
 if __name__ == "__main__":
